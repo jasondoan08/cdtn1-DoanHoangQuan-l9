@@ -28,7 +28,20 @@ git add .
 git commit -m
 git push origin main
 - Trình bày giúp tôi nên ghi gì vào trong Readme.md
--> 
+-> Dự án Dự báo Khách hàng Rời bỏ (L9)
+1. Mục tiêu
+Hệ thống phân tích lịch sử mua hàng và bảo hành để dự báo khách hàng có nguy cơ không quay lại mua sắm.
+
+2. Công nghệ sử dụng
+Python 3.11+
+Pandas, Scikit-learn, Matplotlib
+FastAPI, Uvicorn
+3. Trạng thái dự án
+ Khởi tạo cấu trúc dự án
+ Thiết lập môi trường ảo (venv)
+ Chạy thành công Smoke Test kiểm tra dữ liệu
+- Về phiêu phạm vi sẽ điền những gì
+-> Bước 1: Điền Phiếu phạm vi Mã luồng & Tên luồng: L9 - Dự báo khách hàng rời bỏ.   Phạm vi diễn đạt bằng 1 câu: "Hệ thống phân tích lịch sử mua hàng và bảo hành để dự báo khách hàng có nguy cơ không quay lại mua sắm".   Danh sách 5 User Story dự kiến:   US1: Là hệ thống AI, tôi muốn tổng hợp dữ liệu lịch sử mua hàng và yêu cầu bảo hành của từng khách hàng.   US2: Là hệ thống AI, tôi muốn tiền xử lý dữ liệu và trích xuất các đặc trưng hành vi (như số ngày từ lần mua cuối, tần suất mua, tổng tiền).US3: Là hệ thống AI, tôi muốn dự đoán xác suất rời bỏ (churn) của một khách hàng dựa trên mô hình đã huấn luyện.US4: Là nhân viên Marketing, tôi muốn nhận danh sách các khách hàng có nguy cơ rời bỏ cao để có kế hoạch chăm sóc.US5: Là quản lý, tôi muốn xem thống kê tỷ lệ khách hàng có nguy cơ rời bỏ trên tổng số khách hàng.Dữ liệu làm việc: Chọn "Sinh mô phỏng". ước lượng: "Khoảng 1000 - 2000 dòng dữ liệu giao dịch giả lập".   Công nghệ dự kiến: Python, Scikit-learn, FastAPI, Jupyter Notebook
 *Ghi chú:*
 - Nếu ở bài nộp này sinh viên **hoàn toàn không sử dụng bất kỳ công cụ AI nào**, hãy ghi rõ `Không sử dụng công cụ AI` vào bảng.
 
