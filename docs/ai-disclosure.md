@@ -44,6 +44,7 @@ FastAPI, Uvicorn
 *Ghi chú:*
 - Nếu ở bài nộp này sinh viên **hoàn toàn không sử dụng bất kỳ công cụ AI nào**, hãy ghi rõ `Không sử dụng công cụ AI` vào bảng.
 
+
 ---
 
 ### III. CAM KẾT VỀ LIÊM CHÍNH HỌC THUẬT
@@ -52,3 +53,39 @@ FastAPI, Uvicorn
 
 * **Chữ ký / Họ tên sinh viên:** Đoàn Hoàng Quân  
 * **Ngày khai báo:** 28/09/2026
+
+Công cụ AI: Gemini
+
+Dùng vào việc gì:
+
+Gợi ý mở rộng danh sách User Story theo chuẩn INVEST, hỗ trợ phát biểu tiêu chí chấp nhận Given-When-Then và gán nhãn MoSCoW.
+
+Rà soát quy tắc vẽ sơ đồ Use Case chuẩn UML (phát hiện lỗi vẽ mũi tên, gợi ý tách Actor phân quyền và kiểm tra số lượng Use Case).
+
+Gợi ý cấu trúc dàn ý SRS 6 mục, chuẩn hóa công thức phát biểu Yêu cầu phi chức năng (NFR) có ngưỡng số đo được và khung Bảng truy vết.
+
+Gợi ý khung nội dung phát biểu bài toán Học máy (ML Problem Statement) cho Track AI.
+
+Áp dụng ở phần nào:
+
+Mục 1: Bản SRS rút gọn (docs/srs.md).
+
+Mục 2: Sơ đồ Use Case (docs/usecase.drawio) và Bảng đặc tả Use Case.
+
+Mục 4: Mô hình dữ liệu & Đặc tả AI (docs/ml-problem-statement.md).
+
+Cách kiểm chứng:
+
+Đối chiếu trực tiếp nội dung gợi ý với các yêu cầu bắt buộc và Rubric chấm điểm trong file đề bài.
+
+Tự thực thao tác vẽ và tinh chỉnh sơ đồ trực tiếp trên phần mềm draw.io, kiểm tra lại logic nghiệp vụ thực tế.
+
+Đọc lại toàn bộ tài liệu, rà soát lỗi chính tả, tự tính toán và điền con số thực tế vào Bảng truy vết và các chỉ số NFR.
+
+"Tôi xác nhận đã đọc, hiểu và chịu trách nhiệm về toàn bộ nội dung nộp."
+
+Họ và tên: Đoàn Hoàng Quân
+
+MSSV: 2374802010412
+
+Ngày: 06/10/2026
