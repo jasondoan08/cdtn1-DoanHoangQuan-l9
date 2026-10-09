@@ -89,3 +89,26 @@ Họ và tên: Đoàn Hoàng Quân
 MSSV: 2374802010412
 
 Ngày: 06/10/2026
+
+1. Công cụ AI: Gemini.
+2. Dùng vào việc gì: 
+- Hỗ trợ lên ý tưởng khung cấu trúc cho tài liệu phân tích yêu cầu (SRS).
+- Gợi ý cách xây dựng các lập luận đánh đổi (trade-offs) khi thiết kế kiến trúc hệ thống dựa trên yêu cầu phi chức năng (NFR).
+- Tư vấn các bước tiêu chuẩn cần có trong một luồng xử lý Machine Learning (ML Pipeline).
+- Hỗ trợ đối chiếu, rà soát logic khi trích xuất các trường dữ liệu (feature) từ nhiều file CSV phân tán để gom vào bảng Dataset Schema.
+- Rà soát bản phác thảo giao diện (Wireframe) do sinh viên tự vẽ và góp ý bổ sung các thông tin còn thiếu (như việc hiển thị rõ Tỷ lệ Churn ở màn hình Kết quả).
+3. Áp dụng ở phần nào: 
+- Mục 2: Yêu cầu hệ thống và sơ đồ Use Case (Các gạch đầu dòng FR và NFR).
+- Mục 3.2: Lập luận Thiết kế dựa trên Yêu cầu Phi chức năng.
+- Mục 4.2: Bảng Mô tả Dữ liệu (Dataset Schema).
+- Mục 5: Thiết kế giao diện UI Wireframe (Phần rà soát tính hợp lý của bố cục).
+4. Cách kiểm chứng: 
+- Đã đọc hiểu, tự đánh giá và chọn lọc các gợi ý của AI, loại bỏ các phần không phù hợp để đối chiếu sát với bối cảnh bài toán Luồng 9 (Mekong Mobile Smart CRM).
+- Tự tay thao tác vẽ toàn bộ các sơ đồ (Architecture, ML Pipeline) và thiết kế 3 màn hình Wireframe trên công cụ draw.io.
+- Tự kiểm chứng lại các trường dữ liệu được ánh xạ từ các file gốc (`customers_raw.csv`, `orders_2024_2026.csv`, `tickets_history.csv`) để đảm bảo không xảy ra rò rỉ dữ liệu (Data Leakage) khi định nghĩa nhãn.
+- Đã tự tinh chỉnh, diễn đạt lại văn phong báo cáo để phản ánh đúng tư duy và quyết định thiết kế của cá nhân.
+"Tôi xác nhận đã đọc, hiểu và chịu trách nhiệm về toàn bộ nội dung nộp."
+- Họ tên sinh viên: Đoàn Hoàng Quân
+- Mã số sinh viên: 2374802010412
+- Ngày: 10/10/2026
+
