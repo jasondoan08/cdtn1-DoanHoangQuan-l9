@@ -1,0 +1,74 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Trang-1" id="-YyMeIHRlRRdTvd8gv8o">
+    <mxGraphModel dx="1246" dy="1855" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0iNcoRrAIZQKAX5eAThP-4" edge="1" parent="1" source="0iNcoRrAIZQKAX5eAThP-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="0iNcoRrAIZQKAX5eAThP-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0iNcoRrAIZQKAX5eAThP-11" connectable="0" parent="0iNcoRrAIZQKAX5eAThP-4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Gửi thông tin khách hàng" vertex="1">
+          <mxGeometry relative="1" x="-0.1137" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0iNcoRrAIZQKAX5eAThP-1" parent="1" style="whiteSpace=wrap;html=1;" value="Frontend" vertex="1">
+          <mxGeometry height="60" width="120" x="20" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="0iNcoRrAIZQKAX5eAThP-5" edge="1" parent="1" source="0iNcoRrAIZQKAX5eAThP-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="0iNcoRrAIZQKAX5eAThP-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0iNcoRrAIZQKAX5eAThP-12" connectable="0" parent="0iNcoRrAIZQKAX5eAThP-5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Tuyến đặc trưng (Features)" vertex="1">
+          <mxGeometry relative="1" x="-0.0328" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0iNcoRrAIZQKAX5eAThP-7" edge="1" parent="1" source="0iNcoRrAIZQKAX5eAThP-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="0iNcoRrAIZQKAX5eAThP-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0iNcoRrAIZQKAX5eAThP-14" connectable="0" parent="0iNcoRrAIZQKAX5eAThP-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Hiển thị kết quả" vertex="1">
+          <mxGeometry relative="1" x="-0.0012" y="-3" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0iNcoRrAIZQKAX5eAThP-2" parent="1" style="whiteSpace=wrap;html=1;" value="Backend" vertex="1">
+          <mxGeometry height="60" width="120" x="354" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="0iNcoRrAIZQKAX5eAThP-6" edge="1" parent="1" source="0iNcoRrAIZQKAX5eAThP-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="0iNcoRrAIZQKAX5eAThP-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0iNcoRrAIZQKAX5eAThP-13" connectable="0" parent="0iNcoRrAIZQKAX5eAThP-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Trả kết quả dự đoán (Churn %)" vertex="1">
+          <mxGeometry relative="1" x="-0.0341" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0iNcoRrAIZQKAX5eAThP-3" parent="1" style="whiteSpace=wrap;html=1;" value="AI Model" vertex="1">
+          <mxGeometry height="60" width="120" x="690" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="0iNcoRrAIZQKAX5eAThP-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;Lập luận 3 (Tính bảo trì):&lt;/b&gt; Vì hệ thống cần thường xuyên cập nhật phiên bản mô hình mới (NFR-03), tôi quyết định tách khối AI Model ra độc lập với Frontend, đánh đổi là kiến trúc triển khai hệ thống trở nên phức tạp hơn thay vì gộp chung vào một khối mã nguồn." vertex="1">
+          <mxGeometry height="80" width="720" x="40" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="0iNcoRrAIZQKAX5eAThP-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;Lập luận 2 (Bảo mật):&lt;/b&gt; Vì yêu cầu bảo mật dữ liệu khách hàng (NFR-02), tôi quyết định Backend sẽ lọc bỏ các thông tin định danh (Tên, Số điện thoại) trước khi đưa đặc trưng vào khối AI Model, đánh đổi là Backend sẽ tốn thêm chi phí tính toán cho bước tiền xử lý." vertex="1">
+          <mxGeometry height="80" width="720" x="40" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="0iNcoRrAIZQKAX5eAThP-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;Lập luận 1 (Hiệu năng):&lt;/b&gt; Vì hệ thống yêu cầu thời gian trả kết quả dự đoán dưới 2 giây (NFR-01), tôi quyết định tải sẵn (preload) mô hình Machine Learning vào bộ nhớ ngay khi khởi động Backend thay vì đọc từ ổ cứng, đánh đổi là tốn nhiều RAM của máy chủ hơn." vertex="1">
+          <mxGeometry height="80" width="720" x="40" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="0iNcoRrAIZQKAX5eAThP-21" edge="1" parent="1" source="0iNcoRrAIZQKAX5eAThP-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.855;exitY=1;exitDx=0;exitDy=-4.35;exitPerimeter=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="0iNcoRrAIZQKAX5eAThP-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0iNcoRrAIZQKAX5eAThP-15" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Database" vertex="1">
+          <mxGeometry height="130" width="90" x="369" y="-130" as="geometry" />
+        </mxCell>
+        <mxCell id="0iNcoRrAIZQKAX5eAThP-22" edge="1" parent="1" source="0iNcoRrAIZQKAX5eAThP-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.145;entryY=1;entryDx=0;entryDy=-4.35;entryPerimeter=0;" target="0iNcoRrAIZQKAX5eAThP-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0iNcoRrAIZQKAX5eAThP-23" connectable="0" parent="0iNcoRrAIZQKAX5eAThP-22" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Lưu lịch sử dự đoán" vertex="1">
+          <mxGeometry relative="1" x="-0.1721" y="1" as="geometry">
+            <mxPoint x="31" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

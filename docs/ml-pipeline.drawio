@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Trang-1" id="nN_RMfEBWbBDZXWCmgpD">
+    <mxGraphModel dx="1036" dy="570" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="CNJjuvxgHHuS9EIBEyEE-10" edge="1" parent="1" source="CNJjuvxgHHuS9EIBEyEE-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="CNJjuvxgHHuS9EIBEyEE-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CNJjuvxgHHuS9EIBEyEE-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Nạp dữ liệu (Data Loading):&lt;/b&gt; Đọc file CSV chứa dữ liệu khách hàng (cước phí, lịch sử sử dụng, loại hợp đồng...)" vertex="1">
+          <mxGeometry height="70" width="830" x="414" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="CNJjuvxgHHuS9EIBEyEE-11" edge="1" parent="1" source="CNJjuvxgHHuS9EIBEyEE-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="CNJjuvxgHHuS9EIBEyEE-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CNJjuvxgHHuS9EIBEyEE-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Tiền xử lý &amp;amp; Tạo đặc trưng (Preprocessing &amp;amp; Feature Engineering):&lt;/b&gt; Xử lý dữ liệu bị thiếu (missing values), chuẩn hóa số liệu, và chuyển đổi các cột dạng chữ sang số&amp;nbsp;" vertex="1">
+          <mxGeometry height="70" width="830" x="414" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="CNJjuvxgHHuS9EIBEyEE-13" edge="1" parent="1" source="CNJjuvxgHHuS9EIBEyEE-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="CNJjuvxgHHuS9EIBEyEE-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CNJjuvxgHHuS9EIBEyEE-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Huấn luyện mô hình (Model Training):&lt;/b&gt; Đưa tập Train vào thuật toán học máy (thuật toán dự định dùng: Logistic Regression hoặc Random Forest)." vertex="1">
+          <mxGeometry height="70" width="830" x="414" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="CNJjuvxgHHuS9EIBEyEE-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Đánh giá mô hình (Model Evaluation):&lt;/b&gt; Đánh giá hiệu suất trên tập Test&amp;nbsp;&lt;i&gt;metric sẽ dùng: Đánh giá bằng Macro F1-Score.&lt;/i&gt;" vertex="1">
+          <mxGeometry height="70" width="830" x="414" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="CNJjuvxgHHuS9EIBEyEE-12" edge="1" parent="1" source="CNJjuvxgHHuS9EIBEyEE-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="CNJjuvxgHHuS9EIBEyEE-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="CNJjuvxgHHuS9EIBEyEE-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Chia tập dữ liệu (Data Splitting):&lt;/b&gt; Tách dữ liệu thành các tập Train (Huấn luyện) / Validation (Xác thực) / Test (Kiểm thử). &lt;i&gt;tỷ lệ chia 70% Train - 15% Val - 15% Test.&lt;/i&gt;" vertex="1">
+          <mxGeometry height="70" width="830" x="414" y="330" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
