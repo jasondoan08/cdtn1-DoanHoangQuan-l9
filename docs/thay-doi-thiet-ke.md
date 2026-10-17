@@ -22,5 +22,5 @@
 ### TD-04: Bổ sung chú thích ký hiệu và vùng ngoài phạm vi cho sơ đồ
 - **Phản hồi của GV:** Sơ đồ kiến trúc, ML pipeline chưa có chú thích ký hiệu và phần ngoài phạm vi.
 - **Quyết định:** SỬA / BỔ SUNG.
-- **Lý do:** Giúp người đọc (và giảng viên chấm bài) hiểu chính xác các khối thành phần, ranh giới hệ thống và các yếu tố không nằm trong phạm vi xử lý của prototype.
+- **Lý do:** Giúp người đọc hiểu chính xác các khối thành phần, ranh giới hệ thống và các yếu tố không nằm trong phạm vi xử lý của prototype.
 - **Ảnh hưởng tới thành phần:** Cập nhật lại file `architecture.drawio` và `ml-pipeline.drawio` trên draw.io, xuất lại ảnh PNG tương ứng để đưa vào báo cáo PDF của Bài tập 2.
