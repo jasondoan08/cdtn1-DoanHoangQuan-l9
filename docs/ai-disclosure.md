@@ -112,3 +112,21 @@ Ngày: 06/10/2026
 - Mã số sinh viên: 2374802010412
 - Ngày: 10/10/2026
 
+## 1. Phạm vi và Mục đích Sử dụng AI
+Trong quá trình thực hiện Bài tập 2, công cụ AI được sử dụng nhằm mục đích:
+- Tham khảo cấu trúc thư mục chuẩn cho dự án học máy theo hướng dẫn của môn học.
+- Gợi ý cú pháp xử lý dữ liệu (Pandas), biểu thức chính quy (Regex) trong việc làm sạch văn bản và cách cấu hình `pytest`.
+- Hỗ trợ giải thích và gỡ lỗi (debugging) khi gặp các lỗi môi trường (như lỗi `ModuleNotFoundError` hoặc xung đột định dạng thẻ tag trong Unit Test).
+
+## 2. Chi tiết công việc và Mức độ tham gia của Sinh viên (Human Oversight)
+
+| Hạng mục công việc | Vai trò của Trợ lý AI | Công việc thực tế do Sinh viên thực hiện & Kiểm duyệt |
+| :--- | :--- | :--- |
+| **1. Cấu trúc & Nạp dữ liệu** (`src/data/`) | Gợi ý khung mã nguồn nạp file CSV và gán nhãn Churn. | Tự kiểm tra định dạng file dữ liệu thô, điều chỉnh đường dẫn, chạy thực tế trên máy cá nhân và xác thực kết quả. |
+| **2. Chia dữ liệu chống rò rỉ** (`src/data/split.py`) | Gợi ý cách dùng `train_test_split` có phân tầng (`stratify`). | Tự thiết lập tỉ lệ 70/15/15, trực tiếp chạy script trên môi trường VS Code và xử lý lỗi đường dẫn module (`-m`). |
+| **3. Làm sạch văn bản & PII** (`src/features/text.py`) | Gợi ý biểu thức regex ẩn thông tin SĐT, Email, Serial. | Tự tinh chỉnh logic regex để vừa ẩn PII vừa giữ lại dấu tiếng Việt và thẻ tag `< >`. |
+| **4. Kiểm thử đơn vị** (`tests/test_text.py`) | Gợi ý cấu trúc viết hàm test với `pytest`. | Trực tiếp viết 3 kịch bản test, chạy lệnh kiểm thử trên terminal, phát hiện lỗi lệch thẻ tag, tự cập nhật và xác thực kết quả đạt `3 passed`. |
+| **5. Huấn luyện & Đánh giá** (`src/models/`) | Gợi ý đoạn code mẫu cho Logistic Regression (`class_weight='balanced'`). | Chạy huấn luyện mô hình, phân tích bảng báo cáo đánh giá (Classification Report, Confusion Matrix, ROC-AUC) trên tập Test và lưu artifact. |
+
+"Tôi xác nhận đã đọc, hiểu và chịu trách nhiệm về toàn bộ nội dung nộp."
+- Ngày 17/10/2026
