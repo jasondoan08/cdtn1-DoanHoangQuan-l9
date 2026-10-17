@@ -1,25 +1,22 @@
 import re
-import unicodedata
 
 def lam_sach(s):
     """
-    Giữ DẤU tiếng Việt, thay thế thông tin định danh cá nhân bằng các thẻ tương ứng, 
-    chuẩn hóa khoảng trắng và chuyển về chữ thường.
+    Làm sạch văn bản: Giữ nguyên DẤU tiếng Việt, thay thế thông tin định danh cá nhân 
+    (SĐT, Serial, Email) bằng các thẻ tag <SDT>, <SERIAL>, <EMAIL>, chuẩn hóa khoảng trắng.
     """
     if s is None or str(s).strip() == '':
         return ''
     
     s = str(s).lower()
     
-    # Thay thế số điện thoại bằng thẻ <SDT>
-    s = re.sub(r'\b0\d{9}\b', '<SDT>', s)
-    # Thay thế mã serial bằng thẻ <SERIAL>
-    s = re.sub(r'\b(hd|pb|sn)-?\d+\b', '<SERIAL>', s, flags=re.I)
-    # Thay thế email bằng thẻ <EMAIL>
-    s = re.sub(r'\S+@\S+', '<EMAIL>', s)
+    # Thay thế thông tin định danh bằng các thẻ tag
+    s = re.sub(r'\b0\d{9}\b', ' <SDT> ', s)
+    s = re.sub(r'\b(hd|pb|sn)-?\d+\b', ' <SERIAL> ', s, flags=re.I)
+    s = re.sub(r'\S+@\S+', ' <EMAIL> ', s)
     
-    # Loại bỏ các ký tự đặc biệt không cần thiết nhưng giữ lại chữ cái tiếng Việt có dấu
-    s = re.sub(r'[^\w\sàáạảãâấầậẩẫăắằặẳẵèéẹẻẽêếềệểễìíịỉĩòóọỏõôốồộổỗơớờợởỡùúụủũưứừựửữỳýỵỷỹđ]', ' ', s)
+    # Loại bỏ ký tự đặc biệt nhưng GIỮ LẠI dấu tiếng Việt và dấu ngoặc nhọn < > của thẻ tag
+    s = re.sub(r'[^\w\s<>àáạảãâấầậẩẫăắằặẳẵèéẹẻẽêếềệểễìíịỉĩòóọỏõôốồộổỗơớờợởỡùúụủũưứừựửữỳýỵỷỹđ]', ' ', s)
     
     # Chuẩn hóa khoảng trắng thừa
     return re.sub(r'\s+', ' ', s).strip()
