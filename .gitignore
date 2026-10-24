@@ -6,3 +6,10 @@ __pycache__/
 *.joblib
 models/
 data/raw/
+
+__pycache__/
+*.pyc
+*.pkl
+*.h5
+*.joblib
+.env

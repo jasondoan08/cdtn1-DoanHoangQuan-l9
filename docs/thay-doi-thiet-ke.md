@@ -1,5 +1,5 @@
 # Nhật ký thay đổi thiết kế
-## Điều chỉnh sau phản hồi Bài tập 1 (Buổi 8, Ngày 16/10/2026)
+## Điều chỉnh sau phản hồi Bài tập 1 
 
 ### TD-01: Bổ sung định nghĩa nhãn Churn và cửa sổ thời gian
 - **Phản hồi của GV:** Chưa nêu số mẫu của dataset; nhãn Churn chưa nói rõ cửa sổ thời gian (bao nhiêu ngày không giao dịch).
