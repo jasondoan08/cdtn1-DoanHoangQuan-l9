@@ -1,0 +1,12 @@
+{
+    "selected_model": "LogisticRegression",
+    "macro_f1": 1.0,
+    "per_class_f1": [
+        1.0
+    ],
+    "confusion_matrix": [
+        [
+            2
+        ]
+    ]
+}
