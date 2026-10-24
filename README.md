@@ -38,3 +38,10 @@ Bước 3: Chạy toàn bộ các unit test để kiểm tra logic:
 \`\`\`bash
 pytest -v
 \`\`\`
+### **Mục 6: Tiến độ hiện tại**
+
+```markdown
+## 6. Tiến độ hiện tại
+- Hoàn thành xây dựng pipeline Machine Learning (tiền xử lý dữ liệu, huấn luyện mô hình LogisticRegression, sinh file `metrics.json`).
+- Đã kiểm thử thành công toàn bộ Unit Test (8/8 tests passed).
+- Hoàn tất kiểm thử E2E trên môi trường thư mục sạch và đẩy toàn bộ mã nguồn lên GitHub thành công.
