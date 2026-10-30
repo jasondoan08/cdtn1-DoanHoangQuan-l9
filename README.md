@@ -28,15 +28,12 @@ cdtn1-DoanHoangQuan-l9/
 Bước 3.1: Cài đặt các thư viện phụ thuộc
 Đảm bảo bạn đang đứng ở thư mục gốc của dự án và chạy lệnh sau để cài đặt các gói nhị phân tương thích:
 
-Bash
 pip install --only-binary=:all: -r requirements.txt
 Bước 3.2: Chạy kiểm tra ETL và Huấn luyện mô hình
-Bash
 python -m src.models.train
 Hệ thống sẽ tự động nạp dữ liệu, kiểm tra dữ liệu bẩn (thiếu khóa, sai định dạng ngày tháng), gán nhãn Churn và đánh giá mô hình Baseline.
 
 Bước 3.3: Khởi động Dịch vụ API FastAPI
-Bash
 python -m uvicorn src.app:app --reload
 Server sẽ khởi động và hiển thị: Uvicorn running on http://127.0.0.1:8000
 
