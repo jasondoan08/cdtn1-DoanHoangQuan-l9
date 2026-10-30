@@ -1,47 +1,50 @@
-# Dự án Dự báo Khách hàng Rời bỏ (L9)
+# Mekong Mobile Smart CRM - Hệ thống Dự báo Khách hàng Rời bỏ (Churn Prediction)
 
-## 1. Mục tiêu
-Hệ thống phân tích lịch sử mua hàng và bảo hành để dự báo khách hàng có nguy cơ không quay lại mua sắm.
+Đồ án học phần ứng dụng Trí tuệ Nhân tạo và Kỹ thuật phần mềm hiện đại, xây dựng hệ thống CRM thông minh tích hợp đường ống ETL tự động kiểm định chất lượng dữ liệu, huấn luyện mô hình Machine Learning và cung cấp dịch vụ dự đoán qua RESTful API bằng FastAPI.
 
-## 2. Công nghệ sử dụng
-- Python 3.11+
-- Pandas, Scikit-learn, Matplotlib
-- FastAPI, Uvicorn
+---
 
-## 3. Trạng thái dự án
-- [x] Khởi tạo cấu trúc dự án
-- [x] Thiết lập môi trường ảo (venv)
-- [x] Chạy thành công Smoke Test kiểm tra dữ liệu
+## 1. Công nghệ & Môi trường
+* **Ngôn ngữ lập trình:** Python 3.13
+* **Thư viện xử lý dữ liệu & ML:** Pandas, NumPy, Scikit-learn
+* **Framework Web API:** FastAPI, Uvicorn, Pydantic
+* **Kiến trúc triển khai:** Container hóa qua Docker, quản lý phụ thuộc binary wheel tối ưu cho Windows.
 
-Mục 2: Yêu cầu môi trường: Python 3.13, thư viện pandas, scikit-learn, pytest, joblib.
+---
 
-Mục 6: Trạng thái tiến độ hiện tại: Đã hoàn thành việc nạp dữ liệu thô, gán nhãn Churn, chia dữ liệu chống rò rỉ 70/15/15, làm sạch văn bản bảo mật PII, vượt qua 3 unit test và huấn luyện/đánh giá mô hình Baseline (Logistic Regression với class_weight='balanced').
+## 2. Cấu trúc Thư mục Dự án
+```text
+cdtn1-DoanHoangQuan-l9/
+│
+├── data/                  # Thư mục chứa dữ liệu thô (customers, orders, tickets)
+├── src/
+│   ├── data/              # Module ETL, kiểm tra chất lượng dữ liệu (load.py)
+│   ├── models/            # Module huấn luyện mô hình baseline & pipeline (train.py, baseline.py)
+│   └── app.py             # Dịch vụ FastAPI (tích hợp lifespan, logging, /health, /predict)
+├── .env.example           # Tệp mẫu cấu hình môi trường
+├── requirements.txt       # Danh sách thư viện phụ thuộc ghim phiên bản
+└── README.md              # Tài liệu hướng dẫn dự án
 
-“Nhãn churn=1 có tỷ lệ Recall thấp, dẫn đến việc mô hình bỏ sót nhiều khách hàng chuẩn bị rời bỏ dịch vụ, gây rủi ro thất thoát doanh thu.”
+Bước 3.1: Cài đặt các thư viện phụ thuộc
+Đảm bảo bạn đang đứng ở thư mục gốc của dự án và chạy lệnh sau để cài đặt các gói nhị phân tương thích:
 
-“Cặp nhãn bị nhầm lẫn nhiều nhất là giữa khách hàng ít tương tác nhưng phàn nhiều và khách hàng trung thành, nguyên nhân do thiếu biến đặc trưng về thời gian gắn bó.”
+Bash
+pip install --only-binary=:all: -r requirements.txt
+Bước 3.2: Chạy kiểm tra ETL và Huấn luyện mô hình
+Bash
+python -m src.models.train
+Hệ thống sẽ tự động nạp dữ liệu, kiểm tra dữ liệu bẩn (thiếu khóa, sai định dạng ngày tháng), gán nhãn Churn và đánh giá mô hình Baseline.
 
-“Không xuất hiện hiện tượng nhãn 'thùng rác' hút dữ liệu sai lệch quá mức, phân bố dự đoán nằm trong ngưỡng chấp nhận được.”
+Bước 3.3: Khởi động Dịch vụ API FastAPI
+Bash
+python -m uvicorn src.app:app --reload
+Server sẽ khởi động và hiển thị: Uvicorn running on http://127.0.0.1:8000
 
-## 3. Hướng dẫn từng bước dựng hệ thống
-Bước 1: Cài đặt các thư viện phụ thuộc:
-\`\`\`bash
-pip install -r requirements.txt
-\`\`\`
+Bước 3.4: Trải nghiệm Tài liệu API trực tuyến (Swagger UI)
+Mở trình duyệt web và truy cập:
 
-Bước 2: Chạy script huấn luyện mô hình và tạo tệp metrics.json:
-\`\`\`bash
-python src/models/train_model.py
-\`\`\`
+Giao diện tài liệu Swagger UI: http://127.0.0.1:8000/docs
 
-Bước 3: Chạy toàn bộ các unit test để kiểm tra logic:
-\`\`\`bash
-pytest -v
-\`\`\`
-### **Mục 6: Tiến độ hiện tại**
+Kiểm tra trạng thái hệ thống (/health): Trả về trạng thái hoạt động và xác nhận mô hình đã được nạp.
 
-```markdown
-## 6. Tiến độ hiện tại
-- Hoàn thành xây dựng pipeline Machine Learning (tiền xử lý dữ liệu, huấn luyện mô hình LogisticRegression, sinh file `metrics.json`).
-- Đã kiểm thử thành công toàn bộ Unit Test (8/8 tests passed).
-- Hoàn tất kiểm thử E2E trên môi trường thư mục sạch và đẩy toàn bộ mã nguồn lên GitHub thành công.
+Dự đoán (/predict): Truyền số ngày không giao dịch để nhận kết quả dự đoán rủi ro rời bỏ (churn_prediction) kèm xác suất (churn_probability) và mã tra cứu (ma_yeu_cau).

@@ -130,3 +130,21 @@ Trong quá trình thực hiện Bài tập 2, công cụ AI được sử dụng
 
 "Tôi xác nhận đã đọc, hiểu và chịu trách nhiệm về toàn bộ nội dung nộp."
 - Ngày 17/10/2026
+
+### 1. Công cụ AI
+* **Công cụ sử dụng:** Google Gemini
+
+### 2. Dùng vào việc gì
+* **Gỡ lỗi môi trường & Thư viện:** Xử lý các xung đột biên dịch mã nguồn C++/Rust khi cài đặt các gói thư viện khoa học dữ liệu (`numpy`, `PyYAML`, `pydantic-core`) trên nền tảng Python 3.13 / Windows.
+* **Tối ưu hóa kiến trúc FastAPI:** Tư vấn thiết kế cơ chế quản lý vòng đời ứng dụng (`lifespan`), chuẩn hóa mã định danh `requestId` cho từng yêu cầu và tích hợp structured logging.
+* **Kiểm định chất lượng mã nguồn:** Rà soát logic kiểm tra dữ liệu bẩn (thiếu khóa định danh, định dạng ngày tháng sai lệch) trong tầng ETL (`load.py`).
+
+### 3. Áp dụng ở phần nào
+* **Tầng ETL & Tiền xử lý dữ liệu (`src/data/load.py`):** Tham khảo cấu trúc hàm xử lý ngoại lệ khi dữ liệu thiếu hoặc không hợp lệ.
+* **Tầng Giao diện Dịch vụ (`src/app.py`):** Áp dụng mô hình thiết kế API RESTful bất đồng bộ, tích hợp tự động tài liệu Swagger UI và Việt hóa thông điệp phản hồi.
+* **Cấu hình môi trường & Tài liệu:** Xây dựng tệp cấu hình mẫu (`.env.example`), lập cấu trúc `README.md` và bảng nhật ký lỗi hệ thống (`bug_log.md`).
+
+### 4. Cách kiểm chứng
+* **Kiểm tra đơn vị & Kiểm thử tích hợp:** Toàn bộ mã nguồn do AI gợi ý đều được kiểm chứng bằng cách chạy thực tế qua môi trường nội bộ (`python -m src.models.train` và `uvicorn src.app:app`).
+* **Thực thi kiểm thử thủ công qua API Client:** Tiến hành gửi các HTTP Requests trực tiếp lên giao diện Swagger UI (`http://127.0.0.1:8000/docs`) với các biên dữ liệu khác nhau để xác thực tính chính xác của thuật toán dự đoán Churn.
+* **Đọc hiểu và kiểm soát mã nguồn:** Học viên đã trực tiếp đọc hiểu từng dòng code, chỉnh sửa tên biến, cấu trúc logic theo đúng yêu cầu nghiệp vụ của đề tài trước khi tích hợp vào mã nguồn chính thức. 
