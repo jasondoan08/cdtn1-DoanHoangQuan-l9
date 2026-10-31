@@ -148,3 +148,5 @@ Trong quá trình thực hiện Bài tập 2, công cụ AI được sử dụng
 * **Kiểm tra đơn vị & Kiểm thử tích hợp:** Toàn bộ mã nguồn do AI gợi ý đều được kiểm chứng bằng cách chạy thực tế qua môi trường nội bộ (`python -m src.models.train` và `uvicorn src.app:app`).
 * **Thực thi kiểm thử thủ công qua API Client:** Tiến hành gửi các HTTP Requests trực tiếp lên giao diện Swagger UI (`http://127.0.0.1:8000/docs`) với các biên dữ liệu khác nhau để xác thực tính chính xác của thuật toán dự đoán Churn.
 * **Đọc hiểu và kiểm soát mã nguồn:** Học viên đã trực tiếp đọc hiểu từng dòng code, chỉnh sửa tên biến, cấu trúc logic theo đúng yêu cầu nghiệp vụ của đề tài trước khi tích hợp vào mã nguồn chính thức. 
+
+Viết vào ngày 30/10/2026
