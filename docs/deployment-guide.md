@@ -35,4 +35,31 @@ View application logs:
 docker compose logs -f
 Stop and clean up containers:
 docker compose down
-Security Checklist (7 Items)No.Security ItemStatusEvidence / Implementation Detail1No Secrets in Repo: No .env files or hardcoded API keys/passwords exist in the Git history.PASSEDVerified via manual inspection and Git history logs; uses .env.example.2Secure Passwords / Credentials: Database or user passwords are appropriately hashed or managed.PASSEDConfigured via environment variables; no raw plain-text credentials stored.3Input Validation: API endpoints strictly validate input types and lengths (preventing malformed payloads).PASSEDEnforced via Pydantic models (e.g., min_length=5), returning HTTP 422 on invalid data.4CORS Policy Configuration: Cross-Origin Resource Sharing is appropriately scoped.PASSEDConfigured in FastAPI app to restrict untrusted external origins.5Safe Error Handling: Error responses do not leak stack traces, table names, or connection strings.PASSEDCustom exception handlers catch errors and return clean JSON error codes.6Access Control (A01): Protected endpoints enforce proper user authentication/authorization checks.PASSEDVerified via test cases ensuring unauthorized access is blocked (HTTP 403/401).7Data Leakage Prevention: Training and testing data pipelines are strictly isolated.PASSEDScikit-learn Pipeline and StratifiedKFold implemented; verified via automated tests.
+Security Checklist (7 Items)
+No Secrets in Repo: No .env files or hardcoded API keys/passwords exist in the Git history.
+
+Status: PASSED (Verified via manual inspection and Git history logs; uses .env.example).
+
+Secure Passwords / Credentials: Database or user passwords are appropriately hashed or managed.
+
+Status: PASSED (Configured via environment variables; no raw plain-text credentials stored).
+
+Input Validation: API endpoints strictly validate input types and lengths (preventing malformed payloads).
+
+Status: PASSED (Enforced via Pydantic models, returning HTTP 422 on invalid data).
+
+CORS Policy Configuration: Cross-Origin Resource Sharing is appropriately scoped.
+
+Status: PASSED (Configured in FastAPI app to restrict untrusted external origins).
+
+Safe Error Handling: Error responses do not leak stack traces, table names, or connection strings.
+
+Status: PASSED (Custom exception handlers catch errors and return clean JSON error codes).
+
+Access Control (A01): Protected endpoints enforce proper user authentication/authorization checks.
+
+Status: PASSED (Verified via test cases ensuring unauthorized access is blocked).
+
+Data Leakage Prevention: Training and testing data pipelines are strictly isolated.
+
+Status: PASSED (Scikit-learn Pipeline and StratifiedKFold implemented; verified via automated tests).
