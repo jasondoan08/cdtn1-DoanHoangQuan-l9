@@ -45,3 +45,8 @@ Giao diện tài liệu Swagger UI: http://127.0.0.1:8000/docs
 Kiểm tra trạng thái hệ thống (/health): Trả về trạng thái hoạt động và xác nhận mô hình đã được nạp.
 
 Dự đoán (/predict): Truyền số ngày không giao dịch để nhận kết quả dự đoán rủi ro rời bỏ (churn_prediction) kèm xác suất (churn_probability) và mã tra cứu (ma_yeu_cau).
+
+## Hướng dẫn Chạy Kiểm thử (Testing)
+Để chạy toàn bộ bộ kiểm thử tự động của hệ thống (đảm bảo đạt tiêu chí C3), sử dụng lệnh sau trong Terminal:
+```bash
+pytest -q
