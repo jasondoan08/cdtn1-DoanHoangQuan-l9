@@ -9,7 +9,12 @@ def build_features(df: pd.DataFrame) -> pd.DataFrame:
     
     # Vd xử lý: Điền giá trị thiếu cho các cột số
     if 'so_lan_goi_hotline' in df.columns:
-        df['so_lan_goi_hotline'] = df['so_lan_goi_hotline'].fillna(0)
+        df['so_lan_goi_hotline'] = (
+            pd.to_numeric(
+                df['so_lan_goi_hotline'],
+                errors='coerce'
+            ).fillna(0)
+        )
         
     # Tạo đặc trưng mới (Ví dụ: tỷ lệ phàn nàn trên tổng số tương tác)
     if 'tong_tuong_tac' in df.columns and 'so_lan_phan_nan' in df.columns:

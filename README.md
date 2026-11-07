@@ -49,4 +49,4 @@ Dự đoán (/predict): Truyền số ngày không giao dịch để nhận kế
 ## Hướng dẫn Chạy Kiểm thử (Testing)
 Để chạy toàn bộ bộ kiểm thử tự động của hệ thống (đảm bảo đạt tiêu chí C3), sử dụng lệnh sau trong Terminal:
 ```bash
-pytest -q
+python -m pytest -q

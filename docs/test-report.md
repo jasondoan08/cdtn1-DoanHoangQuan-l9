@@ -1,0 +1,12 @@
+# Test Report - Hệ thống Mekong Mobile Smart CRM (Track AI)
+
+| Mã | Tiền điều kiện | Các bước thực hiện | Dữ liệu thử | Kết quả mong đợi | Mức ưu tiên | Kết quả thực tế | P/F |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **TC-01** | Dữ liệu thô đã được nạp | 1. Gọi hàm làm sạch văn bản | `SN10293A màn hình vỡ, gọi 0912345678` | Trả về chuỗi có thẻ `<SERIAL>`, `<SDT>`, giữ nguyên dấu | Cao | Khớp đúng định dạng thẻ, giữ nguyên dấu tiếng Việt | **PASS** (`docs/screenshots/pytest-pass.png`) |
+| **TC-02** | Dữ liệu đã chia tách train/test | 1. Kiểm tra từ vựng vectorizer | Tập train và tập test | Bộ từ vựng không chứa từ độc lập chỉ có ở tập test | Cao | Không phát hiện rò rỉ từ vựng giữa train và test | **PASS** (`docs/screenshots/pytest-pass.png`) |
+| **TC-03** | Cấu hình huấn luyện sẵn sàng | 1. Chạy huấn luyện lần 1 và lần 2 | `seed: 42` | Hai lần chạy cho file `metrics.json` giống hệt nhau | Cao | Khớp tuyệt đối 100% giữa 2 lần chạy | **PASS** (`docs/screenshots/pytest-pass.png`) |
+| **TC-04** | Kiểm tra giá trị null/thiếu dữ liệu | 1. Chạy hàm `build_features` với cột thiếu giá trị | DataFrame chứa giá trị trống ở `so_lan_goi_hotline` | Điền giá trị 0 thành công, không văng lỗi | Cao | Điền giá trị 0 thành công, chạy qua 8 test case | **PASS** (`docs/screenshots/pytest-pass.png`) |
+| **TC-05** | Dịch vụ dự đoán FastAPI đang chạy | 1. POST `/du-doan` với mô tả rỗng | `{"mo_ta": ""}` | Mã trạng thái `422`, thông báo yêu cầu độ dài tối thiểu | Trung bình | `422 Unprocessable Entity`, thông báo chi tiết | **PASS** (`docs/screenshots/pytest-pass.png`) |
+| **TC-06** | Dịch vụ dự đoán FastAPI đang chạy | 1. POST `/du-doan` với mô tả hợp lệ | `{"mo_ta": "Máy sạc không vào điện"}` | Mã trạng thái `200`, trả về top 3 dự đoán kèm độ tin cậy | Cao | `200 OK`, trả về đúng cấu trúc JSON dự đoán | **PASS** (`docs/screenshots/pytest-pass.png`) |
+| **TC-07** | Pipeline kiểm định dữ liệu | 1. Chạy kiểm tra định dạng cột dữ liệu đầu vào | File CSV dữ liệu khách hàng | Xác thực thành công các cột bắt buộc | Cao | Xác thực thành công, dữ liệu hợp lệ | **PASS** (`docs/screenshots/pytest-pass.png`) |
+| **TC-08** | Kiểm thử tính ổn định mô hình | 1. Kiểm tra phân lớp dữ liệu qua cross-validation | Dữ liệu huấn luyện 5-fold | Trả về độ đo F1-macro kèm độ lệch chuẩn | Cao | Trả về chỉ số ổn định không có lỗi ngoại lệ | **PASS** (`docs/screenshots/pytest-pass.png`) |
