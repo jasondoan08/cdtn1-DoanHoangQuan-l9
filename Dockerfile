@@ -22,4 +22,4 @@ EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
   CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/health').read()" || exit 1
 # Lệnh mặc định khi container chạy (bạn có thể thay đổi tùy thuộc vào điểm vào của dự án, ví dụ: src/train.py hoặc dịch vụ API)
-CMD ["python", "src/models/train.py"]
+CMD ["uvicorn", "src.app:app", "--host", "0.0.0.0", "--port", "8000"]
