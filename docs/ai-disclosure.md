@@ -150,3 +150,23 @@ Trong quá trình thực hiện Bài tập 2, công cụ AI được sử dụng
 * **Đọc hiểu và kiểm soát mã nguồn:** Học viên đã trực tiếp đọc hiểu từng dòng code, chỉnh sửa tên biến, cấu trúc logic theo đúng yêu cầu nghiệp vụ của đề tài trước khi tích hợp vào mã nguồn chính thức. 
 
 Viết vào ngày 30/10/2026
+
+# Khai báo sử dụng Công cụ AI (AI Disclosure)
+
+## 1. Công cụ AI sử dụng
+* **Tên công cụ:** Google Gemini
+
+## 2. Dùng vào việc gì
+* Tra cứu cú pháp cấu hình và giải thích các thông báo lỗi kỹ thuật (debugging) trong quá trình đóng gói container và chạy kiểm thử tự động.
+* Tham khảo bố cục trình bày chuẩn cho tài liệu mô tả mô hình (Model Card) và cấu trúc đề mục báo cáo.
+
+## 3. Áp dụng ở phần nào
+* **Cấu hình hạ tầng (`Dockerfile`, `docker-compose.yml`):** Hỗ trợ rà soát lỗi cú pháp thuộc tính `start_period` trong `healthcheck`, cấu hình người dùng không phải root (`appuser`) và lệnh khởi chạy dịch vụ `uvicorn`.
+* **Kiểm thử (`tests/`):** Hỗ trợ xác định nguyên nhân lỗi xung đột đường dẫn (`import file mismatch`) do trùng lặp thư mục khi chạy `pytest`.
+* **Tài liệu (`docs/model-card.md`):** Gợi ý khung sườn các đề mục kỹ thuật để mô tả thông số đầu vào/đầu ra của module AI.
+
+## 4. Cách kiểm chứng
+* **Kiểm thử vận hành thực tế:** Tự tay chạy lệnh `docker compose up -d --build` và kiểm tra trạng thái hoạt động qua `docker compose ps` (xác nhận cả hai container `app` và `db` đều đạt trạng thái `healthy`).
+* **Kiểm thử API và mã nguồn:** Chạy trực tiếp bộ kiểm thử `python -m pytest tests/ -v` (đạt 8/8 test case `PASSED`) và kiểm tra phản hồi thực tế của các endpoint trên giao diện Swagger UI (`http://localhost:8080/docs`).
+* **Rà soát toàn bộ mã nguồn:** Sinh viên tự kiểm tra, chỉnh sửa từng dòng cấu hình để đảm bảo khớp hoàn toàn với dữ liệu thực tế (`customers`, `orders`, `tickets`) và kiến trúc dự án trước khi đưa lên GitHub.
+ngày khai báo 14/11/2026
